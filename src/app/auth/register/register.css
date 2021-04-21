@@ -1,0 +1,23 @@
+#sign-up-form{
+    display: inline-block;
+    margin: 5% 27% 27%;
+    width: 45%;
+    background: #659DBD;
+    padding: 50px 50px 0px 50px;
+    color: white;
+}
+
+#sign-up{
+    border-radius: 20px;
+    background: #ff8c00;
+    border: none;
+}
+
+#sign-up-head{
+    position: relative;
+    font-family: 'sofia', 'sans-serif';
+    font-size: 25px;
+    bottom: 20px;
+    padding-top: 10px;
+    align-content: start;
+}
