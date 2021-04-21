@@ -118,9 +118,9 @@ const TodoActions = (props) => {
     return(
         <>
             <Dropdown overlay={actions}>
-                <a className="ant-dropdown-link">
+                <Button type={'link'} className="ant-dropdown-link">
                     <b> Actions</b> <DownOutlined />
-                </a>
+                </Button>
             </Dropdown>
 
             <Modal

@@ -29,7 +29,7 @@ function formatMessagesFromError(error) {
     );
 }
 
-const apiRequest = ({ dispatch }) => next => action => {
+const api = ({ dispatch }) => next => action => {
     if (action.type === API_REQUEST.START) {
         const {
             method,
@@ -105,5 +105,6 @@ const apiRequest = ({ dispatch }) => next => action => {
     }
     return next(action);
 };
+const apiRequest = [api];
 
-export default [apiRequest];
+export default apiRequest;

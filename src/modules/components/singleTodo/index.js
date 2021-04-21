@@ -33,7 +33,7 @@ const SingleTodo = (props) => {
 
     useEffect(() => {
         fetchTodo(id)
-    }, []);
+    }, [fetchTodo, id]);
 
     const afterDelete = (id) => {
         setFormVisibility({

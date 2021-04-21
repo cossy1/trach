@@ -12,13 +12,18 @@ const StatusUpdate = (props) => {
         todo
     } = props;
 
-    const afterDelete = () => {
+    useEffect(() => {
+        fetchTodo(todo?.id);
+        fetchTodos();
+    }, []);
+
+    const afterUpdate = () => {
         fetchTodo(todo?.id);
         fetchTodos();
     };
 
     const OnClick = ({ key }) => {
-        todoStatusUpdate(key, todo?._id, () => afterDelete(todo?._id));
+        todoStatusUpdate(key, todo?._id, () => afterUpdate(todo?._id));
     };
 
     const menu = (

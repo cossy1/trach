@@ -88,7 +88,7 @@ const AllTodos = (props) => {
                 <Space size="middle">
                     <Row gutter={16}>
                         < Col>
-                            <a onClick={() => {
+                            <Button type={'link'} onClick={() => {
                                 const data = {
                                     name: todo.name,
                                     description: todo.description,
@@ -97,17 +97,17 @@ const AllTodos = (props) => {
                                 showEdit(data)
                             }}>
                                 <i className="ri-pencil-line"/>
-                            </a>
+                            </Button>
                         </Col>
                         <Col>
-                            <a onClick={() => handleView(todo?._id)}>
+                            <Button type={'link'} onClick={() => handleView(todo?._id)}>
                                 <i className="ri-eye-2-line"/>
-                            </a>
+                            </Button>
                         </Col>
                         <Col>
-                            <a onClick={() => handleShowDelete(todo?._id)}>
+                            <Button type={'link'} onClick={() => handleShowDelete(todo?._id)}>
                                 <i className="ri-delete-bin-line"/>
-                            </a>
+                            </Button>
                         </Col>
                     </Row>
                 </Space>

@@ -2,13 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ec132c0-ea76-4d1b-b7fe-141442f376bb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/components/all-todos/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/components/all-todos/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/components/singleTodo/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/components/singleTodo/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/components/status-update/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/components/status-update/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/components/todo-actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/components/todo-actions/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/middleware/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/middleware/api.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +26,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1rUeSUHEnPm7GtpASYUSgozRJfW" />
@@ -83,7 +90,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1619035095519</updated>
-      <workItem from="1619035096872" duration="6599000" />
+      <workItem from="1619035096872" duration="9408000" />
     </task>
     <servers />
   </component>
@@ -95,21 +102,21 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="0" y="0" key="FileDocumentManager.FileCacheConflict/0.0.1280.720@0.0.1280.720" timestamp="1619042612258" />
-    <state width="1259" height="156" key="GridCell.Tab.0.bottom" timestamp="1619043664628">
+    <state width="1259" height="156" key="GridCell.Tab.0.bottom" timestamp="1619046861083">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1259" height="156" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1619043664628" />
-    <state width="1259" height="156" key="GridCell.Tab.0.center" timestamp="1619043664627">
+    <state width="1259" height="156" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1619046861083" />
+    <state width="1259" height="156" key="GridCell.Tab.0.center" timestamp="1619046861081">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1259" height="156" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1619043664627" />
-    <state width="1259" height="156" key="GridCell.Tab.0.left" timestamp="1619043664625">
+    <state width="1259" height="156" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1619046861081" />
+    <state width="1259" height="156" key="GridCell.Tab.0.left" timestamp="1619046861079">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1259" height="156" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1619043664625" />
-    <state width="1259" height="156" key="GridCell.Tab.0.right" timestamp="1619043664627">
+    <state width="1259" height="156" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1619046861079" />
+    <state width="1259" height="156" key="GridCell.Tab.0.right" timestamp="1619046861082">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1259" height="156" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1619043664627" />
+    <state width="1259" height="156" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1619046861082" />
   </component>
 </project>
