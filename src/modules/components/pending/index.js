@@ -70,7 +70,7 @@ const Pending = (props) => {
                         : (filterTodos && !isEmpty(filterTodos)) ? filterTodos.map(pending => (
                             <p key={pending._id} id={'pending'} style={{background: '#00BFFF', maxWidth: '1200px', minWidth: '150px'}}>
                             <span style={{color: 'black', overflow: 'hidden',
-                            textOverflow: 'ellipsis', whiteSpace: 'nowrap', float: 'left', minWidth: '100px', width: '150px', padding: '2px'}}>
+                            textOverflow: 'ellipsis', whiteSpace: 'nowrap', float: 'left', minWidth: '100px', width: '145px', padding: '2px'}}>
                             {pending.name}
                        </span>
                             </p>
