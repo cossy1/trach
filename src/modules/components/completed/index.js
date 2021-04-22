@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {Button, Spin} from "antd";
+import {Button, Col, Row, Spin} from "antd";
 import TodoForm from "../todoForm/todo";
 import CryImage from "../../../utils/svg/cry";
 import {filterCompletedTodos} from "../../../_shared/hooks";
@@ -35,12 +35,18 @@ const Completed = (props) => {
         <>
             <div>
                 <header>
-                    <span
-                        style={{justifyContent: 'left', float: 'left', fontSize: '40px', fontWeight: '500', color: 'green'}}>
+                    <Row gutter={[16, 24]}>
+                        <Col span={12}>
+                            <span
+                                style={{justifyContent: 'left', float: 'left',
+                                    fontWeight: '500', fontSize: '1.8em', color: 'green'}}>
                         Completed
                     </span>
-                    <span
-                        style={{justifyContent: 'left', float: 'right', margin: '15px'}}>
+                        </Col>
+
+                        <Col span={12}>
+                            <span
+                                style={{justifyContent: 'left', float: 'right', margin: '10px'}}>
                          <Button
                              type={'primary'}
                              onClick={() => handleShow()}
@@ -53,14 +59,18 @@ const Completed = (props) => {
                         Create Todo
                     </Button>
                     </span>
+                        </Col>
+                    </Row>
+
                 </header>
             </div>
 
             <div style={{padding: '100px'}}>
                 {
                     loading ? <Spin  tip={'Loading'} size={'medium'} style={{textAlign: 'center', paddingTop: '150px'}} /> : (filterTodos && !isEmpty(filterTodos)) ? filterTodos.map(completed => (
-                        <p key={completed._id} id={'pending'} style={{background: 'green'}}>
-                             <span style={{float: 'left', paddingLeft: '15px', color: 'black'}}>
+                        <p key={completed._id} id={'pending'} style={{background: 'green', maxWidth: '1200px', minWidth: '150px'}}>
+                            <span style={{color: 'black', overflow: 'hidden',
+                                textOverflow: 'ellipsis', whiteSpace: 'nowrap', float: 'left', minWidth: '100px', width: '145px', padding: '2px'}}>
                             {completed.name}
                              </span>
                         </p>
