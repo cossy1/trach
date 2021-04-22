@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {Button, Spin} from "antd";
+import {Button, Col, Row, Spin} from "antd";
 import CryImage from "../../../utils/svg/cry";
 import {connect} from "react-redux";
 import {filterPendingTodos} from "../../../_shared/hooks";
@@ -34,12 +34,18 @@ const Pending = (props) => {
         <>
             <div>
                 <header>
-                    <span
-                        style={{justifyContent: 'left', float: 'left', fontWeight: '500', fontSize: '40px', color: '#00BFFF'}}>
+                   <Row gutter={[16, 24]}>
+                       <Col span={12}>
+                            <span
+                                style={{justifyContent: 'left', float: 'left',
+                                    fontWeight: '500', fontSize: '1.8em', color: '#00BFFF'}}>
                         Pending...
                     </span>
-                    <span
-                        style={{justifyContent: 'left', float: 'right', margin: '15px'}}>
+                       </Col>
+
+                       <Col span={12}>
+                            <span
+                                style={{justifyContent: 'left', float: 'right', margin: '10px'}}>
                          <Button
                              type={'primary'}
                              onClick={() => handleShow()}
@@ -52,6 +58,9 @@ const Pending = (props) => {
                         Create Todo
                     </Button>
                     </span>
+                       </Col>
+                   </Row>
+
                 </header>
             </div>
 
@@ -59,8 +68,9 @@ const Pending = (props) => {
                 {
                     loading ? <Spin  tip={'Loading'} size={'medium'} style={{textAlign: 'center', paddingTop: '150px'}} />
                         : (filterTodos && !isEmpty(filterTodos)) ? filterTodos.map(pending => (
-                            <p key={pending._id} id={'pending'} style={{background: '#00BFFF'}}>
-                       <span style={{float: 'left', paddingLeft: '15px', color: 'black'}}>
+                            <p key={pending._id} id={'pending'} style={{background: '#00BFFF', maxWidth: '1200px', minWidth: '150px'}}>
+                            <span style={{color: 'black', overflow: 'hidden',
+                            textOverflow: 'ellipsis', whiteSpace: 'nowrap', float: 'left', minWidth: '100px', width: '150px', padding: '2px'}}>
                             {pending.name}
                        </span>
                             </p>

@@ -4,7 +4,6 @@
     overflow: hidden;
     background-color: #f1f1f1;
     padding: 10px;
-    border-bottom: 1px solid grey;
 }
 
 .header a {
@@ -38,6 +37,6 @@
     .header a {
         float: none;
         display: block;
-        text-align: left;
+        text-align: center;
     }
 }

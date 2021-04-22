@@ -73,7 +73,7 @@ const SingleTodo = (props) => {
 
     return(
         <>
-            <Row gutter={[16]} style={{marginTop: '15px'}}>
+            <Row gutter={[16, { xs: 6, sm: 10, md: 12, lg: 16 }]} style={{marginTop: '15px'}}>
                 <Col span={12}>
                     <div
                         style={{textOverflow: 'ellipsis', overflow: 'hidden',
@@ -83,14 +83,14 @@ const SingleTodo = (props) => {
                         {todo?.name}
                     </div>
                 </Col>
-                <Col span={4}>
+                <Col span={8}>
                     <span
                         style={{justifyContent: 'left', float: 'left', fontWeight: '500', fontSize: '20px', color: '#00BFFF'}}>
                       <StatusUpdate todo={todo}/>
                     </span>
                 </Col>
 
-                <Col span={8}>
+                <Col span={4}>
                     <TodoActions todo={todo}/>
                 </Col>
 
@@ -101,8 +101,8 @@ const SingleTodo = (props) => {
                     loading ? <Spin  tip={'Loading'} size={'medium'} style={{textAlign: 'center', paddingTop: '150px'}} />
                     : (todo && !isEmpty(todo?.tasks)) ? todo?.tasks?.map(task => (
                         <>
-                            <Row gutter={[16, { xs: 8, sm: 16, md: 24, lg: 32 }]}>
-                                <Col span={20}>
+                            <Row gutter={[16, { xs: 6, sm: 10, md: 12, lg: 16 }]}>
+                                <Col span={18}>
                                     <p key={task?._id} id={'pending'} style={{ background: '#00BFFF'}}>
                                      <span style={{float: 'left', paddingLeft: '15px'}}>
                                     {task?.description}
@@ -110,7 +110,7 @@ const SingleTodo = (props) => {
                                     </p>
                                 </Col>
 
-                                <Col>
+                                <Col span={3}>
                                     <p style={{width: '100%', margin: '10px'}}>
                                         <Button size={'small'} onClick={() => {
                                             const data = {
@@ -124,7 +124,7 @@ const SingleTodo = (props) => {
                                     </p>
                                 </Col>
 
-                                <Col>
+                                <Col span={1}>
                                     <p style={{width: '100%', margin: '10px'}}>
                                         <Button
                                             size={'small'}

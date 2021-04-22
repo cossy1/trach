@@ -1,7 +1,7 @@
-import React, {Suspense, useEffect, useLayoutEffect, useState} from 'react';
+import React, {Suspense, useEffect, useState} from 'react';
 import SideNav from "./sideNav";
 import './styles.css'
-import {Button, Dropdown, Layout, Menu} from "antd";
+import {Button, Col, Dropdown, Layout, Menu, Row} from "antd";
 import {Loader} from "semantic-ui-react";
 import {Route, Switch} from "react-router-dom";
 import trach from '../../assets/images/trach.png'
@@ -12,12 +12,9 @@ import {fetchTodos} from "../../redux/action/todo";
 import {RoutesNavs} from "./routes";
 
 
-
 const { Content } = Layout;
 
-
 const Home = (props) => {
-
     const { fetchTodos, allTodos } = props;
     const {logOut} = props;
 
@@ -60,20 +57,30 @@ const Home = (props) => {
         <Layout style={{ minHeight: '100vh', color: color.theme === 'transparent' ? 'black' : 'white'}} >
             <SideNav color={color} setColor={setColor} todos={todos}/>
             <Layout className="site-layout" style={{backgroundColor: color?.theme}}>
-                <div className="header" style={{backgroundColor: color.theme === 'transparent' ? 'white' : 'black'}}>
-                    <Dropdown overlay={menu}>
-                        <a style={{color: color.theme === 'transparent' ? 'black' : 'white'}}>
-                            Settings <DownOutlined />
-                        </a>
-                    </Dropdown>
+                <div style={{borderBottom: '1px solid grey'}}>
+                    <Row gutter={[16, 24]}>
+                        <Col span={12}>
+                            <span style={{position: 'absolute', top: '0', color: 'dodgerblue', fontSize: '0.45em'}}>
+                            <img src={trach} height={'80px'} alt={'logo'}/>
+                            <small style={{color: color.theme === 'transparent' ? 'black' : 'white'}}>
+                             ...keep track of your tasks
+                            </small>
+                             </span>
+                        </Col>
+
+                        <Col span={12}>
+                            <div className="header" style={{backgroundColor: color.theme === 'transparent' ? 'transparent' : '#141d26'}}>
+                                <Dropdown overlay={menu}>
+                                    <a href={'/login'} style={{color: color.theme === 'transparent' ? '#141d26' : 'white'}}>
+                                        Settings <DownOutlined />
+                                    </a>
+                                </Dropdown>
+                            </div>
+                        </Col>
+                    </Row>
+
                 </div>
 
-                <span style={{position: 'absolute', top: '0', color: 'dodgerblue', fontSize: '0.7em'}}>
-                     <img src={trach} height={'80px'} alt={'logo'}/>
-                       <small style={{color: color.theme === 'transparent' ? 'black' : 'white'}}>
-                           ...keep track of your tasks
-                       </small>
-                 </span>
                 <Content style={{ margin: '0 16px', textAlign: 'center', color: color.theme }} >
                     <Suspense fallback={<Loader />}>
                         <Switch>

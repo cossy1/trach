@@ -9,7 +9,7 @@ import TabletBreakpoint from "../modules/responsive_utils/tablet_breakpoint";
 
 const Login = lazy(() => import('./auth/login/index'));
 const SignUp = lazy(() => import('./auth/register'));
-const Dashboard = lazy(() => import('../modules/components/index'));
+const Layout = lazy(() => import('../modules/components/index'));
 
 const useMediaQuery = () => {
     const [screenSize, setScreenSize] = useState([0, 0]);
@@ -37,7 +37,6 @@ const Load = () => (
 
 const App = () => {
     const [width] = useMediaQuery();
-    console.log('%c Screen Width:::', 'color: red; font-size: 20px', width);
     return width < 767 ? (
         <PhoneBreakpoint>
             <Suspense fallback={<Load />}>
@@ -54,7 +53,7 @@ const App = () => {
                         exact={true}
                         name={'signUp'}
                     />,
-                    <CustomRoute path="/:app" name="layout" isPrivate component={Dashboard} />
+                    <CustomRoute path="/:app" name="layout" isPrivate component={Layout} />
                     <Redirect
                         from={'/'}
                         to={{
@@ -83,7 +82,7 @@ const App = () => {
                         exact={true}
                         name={'signUp'}
                     />,
-                    <CustomRoute path="/:app" name="layout" isPrivate component={Dashboard} />
+                    <CustomRoute path="/:app" name="layout" isPrivate component={Layout} />
                     <Redirect
                         from={'/'}
                         to={{
@@ -112,7 +111,7 @@ const App = () => {
                         exact={true}
                         name={'signUp'}
                     />,
-                    <CustomRoute path="/:app" name="layout" isPrivate component={Dashboard} />
+                    <CustomRoute path="/:app" name="layout" isPrivate component={Layout} />
                     <Redirect
                         from={'/'}
                         to={{
