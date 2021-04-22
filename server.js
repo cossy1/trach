@@ -12,3 +12,4 @@ app.listen(port, () => {
 });
 
 //    "start": "node server/server.js",
+// "start": "react-scripts start",
