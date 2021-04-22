@@ -1,4 +1,4 @@
-import React, {Suspense, useEffect, useState} from 'react';
+import React, {Suspense, useEffect, useLayoutEffect, useState} from 'react';
 import SideNav from "./sideNav";
 import './styles.css'
 import {Button, Dropdown, Layout, Menu} from "antd";
@@ -11,10 +11,13 @@ import {connect} from "react-redux";
 import {fetchTodos} from "../../redux/action/todo";
 import {RoutesNavs} from "./routes";
 
+
+
 const { Content } = Layout;
 
 
 const Home = (props) => {
+
     const { fetchTodos, allTodos } = props;
     const {logOut} = props;
 

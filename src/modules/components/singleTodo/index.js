@@ -23,6 +23,7 @@ const SingleTodo = (props) => {
         loading,
         match
     } = props;
+
     const [onFormVisibility, setFormVisibility] = useState({
         taskVisibility: false,
         taskValues: null,
@@ -97,9 +98,10 @@ const SingleTodo = (props) => {
 
             <div style={{paddingTop: '30px', color: 'black'}}>
                 {
-                    loading ? <Spin  tip={'Loading'} size={'medium'} style={{textAlign: 'center', paddingTop: '150px'}} /> : (todo && !isEmpty(todo?.tasks)) ? todo?.tasks?.map(task => (
+                    loading ? <Spin  tip={'Loading'} size={'medium'} style={{textAlign: 'center', paddingTop: '150px'}} />
+                    : (todo && !isEmpty(todo?.tasks)) ? todo?.tasks?.map(task => (
                         <>
-                            <Row gutter={12}>
+                            <Row gutter={[16, { xs: 8, sm: 16, md: 24, lg: 32 }]}>
                                 <Col span={20}>
                                     <p key={task?._id} id={'pending'} style={{ background: '#00BFFF'}}>
                                      <span style={{float: 'left', paddingLeft: '15px'}}>
@@ -108,7 +110,7 @@ const SingleTodo = (props) => {
                                     </p>
                                 </Col>
 
-                                <Col span={2}>
+                                <Col>
                                     <p style={{width: '100%', margin: '10px'}}>
                                         <Button size={'small'} onClick={() => {
                                             const data = {
@@ -122,7 +124,7 @@ const SingleTodo = (props) => {
                                     </p>
                                 </Col>
 
-                                <Col span={2}>
+                                <Col>
                                     <p style={{width: '100%', margin: '10px'}}>
                                         <Button
                                             size={'small'}
