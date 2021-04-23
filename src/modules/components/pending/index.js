@@ -64,9 +64,9 @@ const Pending = (props) => {
                 </header>
             </div>
 
-            <div style={{padding: '100px'}}>
+            <div style={{padding: '50px'}}>
                 {
-                    loading ? <Spin  tip={'Loading'} size={'medium'} style={{textAlign: 'center', paddingTop: '150px'}} />
+                    loading ? <Spin  tip={'Loading'} size={'medium'} style={{textAlign: 'center'}} />
                         : (filterTodos && !isEmpty(filterTodos)) ? filterTodos.map(pending => (
                             <p key={pending._id} id={'pending'} style={{background: '#00BFFF', maxWidth: '1200px', minWidth: '150px'}}>
                             <span style={{color: 'black', overflow: 'hidden',

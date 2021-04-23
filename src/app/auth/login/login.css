@@ -3,10 +3,11 @@
     margin-top: 10%;
     margin-left: 27%;
     margin-right:27%;
+    align-content: center;
     width: 45%;
-    background: #659DBD;
+    background-color: white;
+    box-shadow: 0px 0px 24px 0px rgba(0,0,0,0.1);
     padding: 50px 50px 0px 50px;
-    color: white;
 }
 
 #sign-in{

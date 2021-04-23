@@ -103,12 +103,14 @@ const SingleTodo = (props) => {
                         <>
                             <Row gutter={[16, { xs: 6, sm: 10, md: 12, lg: 16 }]}>
                                 <Col span={18}>
-                                    <p key={task?._id} id={'pending'} style={{ background: '#00BFFF'}}>
-                                     <span style={{float: 'left', paddingLeft: '15px'}}>
-                                    {task?.description}
+                           <p key={task?._id} id={'pending'} style={{ background: '#00BFFF', maxWidth: '1200px', minWidth: '150px'}}>
+                            <span style={{color: 'black', overflow: 'hidden',
+                             textOverflow: 'ellipsis', whiteSpace: 'nowrap',
+                           float: 'left', minWidth: '100px', width: '145px', padding: '2px'}}>
+                               {task?.description}
                                      </span>
-                                    </p>
-                                </Col>
+                                 </p>
+                           </Col>
 
                                 <Col span={3}>
                                     <p style={{width: '100%', margin: '10px'}}>

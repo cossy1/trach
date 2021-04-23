@@ -62,10 +62,10 @@ const InProgress = (props) => {
 
                 </header>
             </div>
-            <div style={{padding: '100px'}}>
+            <div style={{padding: '50px'}}>
 
                 {
-                    loading ? <Spin  tip={'Loading'} size={'medium'} style={{textAlign: 'center', paddingTop: '150px'}} /> : (filterTodos && !isEmpty(filterTodos)) ? filterTodos.map(p => (
+                    loading ? <Spin  tip={'Loading'} size={'medium'} style={{textAlign: 'center'}} /> : (filterTodos && !isEmpty(filterTodos)) ? filterTodos.map(p => (
                         <p key={p._id} id={'pending'} style={{ background: '#f6c4bc', maxWidth: '1200px', minWidth: '150px'}}>
                              <span style={{color: 'black', overflow: 'hidden',
                                  textOverflow: 'ellipsis', whiteSpace: 'nowrap', float: 'left', minWidth: '100px', width: '145px', padding: '2px'}}>

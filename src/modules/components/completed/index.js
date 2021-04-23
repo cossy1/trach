@@ -65,19 +65,20 @@ const Completed = (props) => {
                 </header>
             </div>
 
-            <div style={{padding: '100px'}}>
+            <div style={{padding: '50px'}}>
                 {
-                    loading ? <Spin  tip={'Loading'} size={'medium'} style={{textAlign: 'center', paddingTop: '150px'}} /> : (filterTodos && !isEmpty(filterTodos)) ? filterTodos.map(completed => (
+                    loading ? <Spin  tip={'Loading'} size={'medium'} style={{textAlign: 'center'}} /> : (filterTodos && !isEmpty(filterTodos)) ? filterTodos.map(completed => (
                         <p key={completed._id} id={'pending'} style={{background: 'green', maxWidth: '1200px', minWidth: '150px'}}>
                             <span style={{color: 'black', overflow: 'hidden',
-                                textOverflow: 'ellipsis', whiteSpace: 'nowrap', float: 'left', minWidth: '100px', width: '145px', padding: '2px'}}>
+                                textOverflow: 'ellipsis', whiteSpace: 'nowrap',
+                                float: 'left', minWidth: '100px', width: '145px', padding: '2px'}}>
                             {completed.name}
                              </span>
                         </p>
-                    )) :  <div id={'cry'}>
+                    )) :  <span>
                         <CryImage/>
-                        <h4>You do not have a completed todo yet</h4>
-                    </div>
+                        <h4 style={{marginLeft: 'auto', width: '14em', marginRight: 'auto'}}>You do not have a completed todo yet</h4>
+                    </span>
                 }
 
             </div>

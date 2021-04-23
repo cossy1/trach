@@ -51,7 +51,7 @@ const Login = (props) => {
                             <span>
                       <small>Need an Account?</small>
                       <Button
-                          style={{color: 'white', padding: '0px', paddingLeft: '2px'}}
+                          style={{padding: '0px', paddingLeft: '2px'}}
                           type={'link'}>
                            <Link to={'/signUp'}>
                           SignUp
