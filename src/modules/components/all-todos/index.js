@@ -1,4 +1,4 @@
-import {Button, Col, Modal, Row, Space, Spin, Table} from 'antd';
+import {Button, Col, Tag, Modal, Row, Space, Spin, Table} from 'antd';
 import React, {useEffect, useState} from "react";
 import {deleteTodo, fetchTodos} from "../../../redux/action/todo";
 import {connect} from "react-redux";
@@ -79,6 +79,13 @@ const AllTodos = (props) => {
             title: 'Status',
             dataIndex: 'status',
             key: 'status',
+            render: (status) => (
+                <>
+                    {status === 'Pending' ? <Tag color={'geekblue'}>{status}</Tag> :
+                        status === 'Progress' ? <Tag color={'volcano'}>{status}</Tag> :
+                        <Tag color={'green'}>{status}</Tag>}
+               </>
+            )
         },
         {
             title: 'Actions',
